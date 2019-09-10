@@ -28,7 +28,7 @@ body {
       transform 0.5s;
     }
 
-      div:nth-child(#{$i})::after {
+    div:nth-child(#{$i})::after {
       content: "#{$i}";
     }
 
