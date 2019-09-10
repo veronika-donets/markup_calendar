@@ -4,40 +4,44 @@ body {
   margin: 50px 0;
 }
 
+
 .calendar {
   max-width: 800px;
   display: grid;
   grid-gap: 1px;
-  grid-template-columns: repeat(7, 100px);
+  grid-template-columns: repeat(7, $size);
   margin: auto;
 
-  div {
-    height: $size;
-    width: $size;
-    border: 1px solid black;
-    line-height: $size;
-    text-align: center;
-    font-family: $text-font;
-    font-size: 30px;
-    background-color: #eeeeee;
-    box-sizing: border-box;
-    transition: background-color 0.5s,
-    cursor 0.5s,
-    transform 0.5s;
-  }
+  @for $i from 1 to 31 {
+    div:nth-child(#{$i}) {
+      height: $size;
+      width: $size;
+      border: 1px solid black;
+      line-height: $size;
+      text-align: center;
+      font-family: $text-font;
+      font-size: 30px;
+      background-color: #eeeeee;
+      box-sizing: border-box;
+      transition: background-color 0.5s,
+      cursor 0.5s,
+      transform 0.5s;
+    }
 
-  div:nth-child(1) {
-    grid-column-start: 2;
-  }
+      div:nth-child(#{$i})::after {
+      content: "#{$i}";
+    }
 
-  div:hover {
-    background-color: #FFBFCB;
-    transform: translate(0, -20px);
-    cursor: pointer;
-  }
-  @for $i from 28 through 31 {
-    &-#{$i} div:nth-last-child(-n+#{31-$i}) {
-      display: none;
+    div:nth-child(#{$i}):hover {
+      background-color: #FFBFCB;
+      transform: translate(0, -20px);
+      cursor: pointer;
+    }
+
+    @for $i from 28 through 31 {
+      &-#{$i} div:nth-last-child(-n+#{31-$i}) {
+        display: none;
+      }
     }
   }
 }
@@ -50,3 +54,5 @@ $i : 1;
   }
   $i : $i + 1;
 }
+
+
