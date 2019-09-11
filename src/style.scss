@@ -27,7 +27,7 @@ body {
       transform 0.5s;
     }
 
-    @for $i from 1 to 31 {
+    @for $i from 1 through 31 {
       div:nth-child(#{$i})::after {
         content: "#{$i}";
       }
