@@ -12,8 +12,7 @@ body {
   grid-template-columns: repeat(7, $size);
   margin: auto;
 
-  @for $i from 1 to 31 {
-    div:nth-child(#{$i}) {
+    > div {
       height: $size;
       width: $size;
       border: 1px solid black;
@@ -28,22 +27,23 @@ body {
       transform 0.5s;
     }
 
-    div:nth-child(#{$i})::after {
-      content: "#{$i}";
-    }
+    @for $i from 1 to 31 {
+      div:nth-child(#{$i})::after {
+        content: "#{$i}";
+      }
 
-    div:nth-child(#{$i}):hover {
-      background-color: #FFBFCB;
-      transform: translate(0, -20px);
-      cursor: pointer;
-    }
+      div:nth-child(#{$i}):hover {
+        background-color: #FFBFCB;
+        transform: translate(0, -20px);
+        cursor: pointer;
+      }
 
-    @for $i from 28 through 31 {
-      &-#{$i} div:nth-last-child(-n+#{31-$i}) {
-        display: none;
+      @for $i from 28 through 31 {
+        &-#{$i} div:nth-last-child(-n+#{31-$i}) {
+          display: none;
+        }
       }
     }
-  }
 }
 
 $week-days: ('mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun');

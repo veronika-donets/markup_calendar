@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="24e2fadd-344b-4378-9706-a3613c9fad54" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +53,8 @@
       <option name="presentableId" value="Default" />
       <updated>1568120265085</updated>
       <workItem from="1568120266246" duration="2049000" />
+      <workItem from="1568186677587" duration="21000" />
+      <workItem from="1568191044141" duration="872000" />
     </task>
     <task id="LOCAL-00001" summary="update readme">
       <created>1568126127462</created>
@@ -72,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568136460789</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixed html">
+      <created>1568138080158</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568138080158</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
